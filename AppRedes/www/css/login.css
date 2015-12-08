@@ -1,0 +1,49 @@
+ion-content {
+	background-color: #212121;
+}
+
+img {
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 20px;
+}
+
+.item-input {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 5%; 
+    width: 90%;
+    background-color: #bfbfbf;
+    border-radius: 8px;
+}
+
+.button {
+    border-color: #245b7a;
+    background-color: #245b7a;
+    color: #fff;
+    height: 50px;
+    margin-left: 5%;
+    min-width: none !important;
+    width: 90% !important;
+    border-radius: 8px;
+}
+
+.list-link{
+	margin-top: -12px;
+}
+
+.link{
+	text-decoration: none;
+	color: #515151;
+}
+
+.scroll-content {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
