@@ -1,5 +1,6 @@
 ion-content {
 	background-color: #212121;
+    font-size: 20px;
 }
 
 span{
@@ -16,12 +17,19 @@ select {
 	margin-left: 2%;
 	border-radius: 8px;
 	background-color: #bfbfbf;
+    font-size: 20px;
 }
 
 .list{
 	margin-top: 10px;
 }
 
+.erro{
+    width: 90%;
+    margin-left: 5%;
+    color: red;
+
+}
 .item-input {
     height: 50px;
     margin-bottom: 10px;
@@ -40,6 +48,14 @@ select {
 .col{
 	padding: 0;
 	margin-bottom: -5px;
+}
+
+.row{
+    text-align: left;
+}
+
+input{
+    font-size: 20px !important;
 }
 
 textarea{
@@ -62,6 +78,7 @@ textarea{
     min-width: none !important;
     width: 90% !important;
     border-radius: 8px;
+    font-size: 20px;
 }
 
 

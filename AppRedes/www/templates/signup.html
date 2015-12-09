@@ -1,7 +1,7 @@
 <link href="../css/signup.css" rel="stylesheet">
 
 <ion-view hide-nav-bar="true">
-  <ion-content padding="true">
+  <ion-content padding="true" scroll="true">
     <span>Selecione a categoria do perfil:</span>
       <div class="row">
         <select id="selectperfil" ng-model="selectperfil">
@@ -13,32 +13,45 @@
         </select>
       </div>  
 
-    <form name="form-empreendedor" ng-show="selectperfil == 'Empreendedor'" ng-submit="Login()">
+
+<!---------------------INICIO-FORMULARIO-EMPREENDEDOR------------------------------------------>
+    <form name="form-empreendedor" ng-show="selectperfil == 'Empreendedor'" ng-submit="SignUpEmpreendedor()">
+
       <span >*Campos Obrigatórios</span>
+
       <div class="row">
         <span style="padding-top: 20px;">*Nome</span>
       </div>
       <div class="row">
         <label class="item item-input">
-          <input type="text">
+          <input type="text"
+          name="nome"
+          ng-model="empreendedor.nome"
+          >       
         </label>
       </div>
+      <p class="erro" ng-show="empreendedor.erronome">*Campo Obrigatório</p> 
+
       <div class="row">
         <span>*Email</span>
       </div>
       <div class="row">
         <label class="item item-input">
-          <input type="text">
+          <input type="text" ng-model="empreendedor.email">
         </label>
       </div>
+      <p class="erro" ng-show="empreendedor.erroemail1">*Campo Obrigatório</p> 
+      <p class="erro" ng-show="empreendedor.erroemail2">*Email Inválido</p> 
+
       <div class="row">
         <span>*Endereço</span>
       </div>
       <div class="row">
         <label class="item item-input">
-          <input type="text">
+          <input type="text" ng-model="empreendedor.endereco">
         </label>
       </div>
+      <p class="erro" ng-show="empreendedor.erroendereco">*Campo Obrigatório</p> 
 
       <div class="row">
         <div class="col numero">
@@ -47,21 +60,25 @@
           </div>
           <div class="row">
             <label class="item item-input">
-              <input type="text">
+              <input type="text" ng-model="empreendedor.numero">
             </label>
           </div>
-        </div>
+        </div> 
+
         <div class="col col-75">
           <div class="row">
             <span>Complemento</span>
           </div>
           <div class="row">
             <label class="item item-input">
-              <input type="text">
+              <input type="text" ng-model="empreendedor.complemento">
             </label>
           </div>
         </div>
       </div>
+      <p class="erro" ng-show="empreendedor.erronumero1">*Campo Obrigatório</p>
+      <p class="erro" ng-show="empreendedor.erronumero2">*Apenas Números</p>
+
       <div class="row">
         <div class="col col-50">
           <div class="row">
@@ -69,11 +86,13 @@
           </div>
           <div class="row">
             <label class="item item-input">
-              <input type="text" ng-model="cep" ng-change="mascara(cep,'#####-###')">
+              <input type="text" ng-model="empreendedor.cep" ui-br-cep-mask>
             </label>
           </div>
         </div>
       </div>
+      <p class="erro" ng-show="empreendedor.errocep">*Campo Obrigatório</p> 
+
       <div class="row">
         <div class="col">
           <div class="row">
@@ -81,27 +100,29 @@
           </div>
           <div class="row">
             <label class="item item-input">
-              <input type="text">
+              <input type="text" ng-model="empreendedor.telefone1" ui-br-phone-number>
             </label>
           </div>
         </div>
+
         <div class="col col-50">
           <div class="row">
             <span>Telefone 2</span>
           </div>
           <div class="row">
             <label class="item item-input">
-              <input type="text">
+              <input type="text" ng-model="empreendedor.telefone2" ui-br-phone-number>
             </label>
           </div>
         </div>
       </div>
+      <p class="erro" ng-show="empreendedor.errotelefone1">*Campo Obrigatório</p> 
 
       <div class="row">
         <span>Descrição</span>
       </div>
       <div class="row">
-        <textarea rows="10"></textarea>
+        <textarea rows="10" ng-model="empreendedor.descricao"></textarea>
       </div>
 
       <label>
@@ -109,5 +130,243 @@
       </label>
 
     </form>
+
+<!---------------------FIM-FORMULARIO-EMPREENDEDOR------------------------------------------>
+
+<!---------------------INICIO-FORMULARIO-ESCOLA------------------------------------------>
+
+    <form name="form-escola" ng-show="selectperfil == 'Escola'" ng-submit="SignUpEscola()">
+
+      <span >*Campos Obrigatórios</span>
+
+      <div class="row">
+        <span style="padding-top: 20px;">*Nome</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text"
+          name="nome"
+          ng-model="escola.nome"
+          >       
+        </label>
+      </div>
+      <p class="erro" ng-show="escola.erronome">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>*Email</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="escola.email">
+        </label>
+      </div>
+      <p class="erro" ng-show="escola.erroemail1">*Campo Obrigatório</p> 
+      <p class="erro" ng-show="escola.erroemail2">*Email Inválido</p> 
+
+      <div class="row">
+        <span>*Endereço</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="escola.endereco">
+        </label>
+      </div>
+      <p class="erro" ng-show="escola.erroendereco">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <div class="col numero">
+          <div class="row">
+            <span>*Número</span>
+          </div>
+          <div class="row">
+            <label class="item item-input">
+              <input type="text" ng-model="escola.numero">
+            </label>
+          </div>
+        </div> 
+
+        <div class="col col-75">
+          <div class="row">
+            <span>Complemento</span>
+          </div>
+          <div class="row">
+            <label class="item item-input">
+              <input type="text" ng-model="escola.complemento">
+            </label>
+          </div>
+        </div>
+      </div>
+      <p class="erro" ng-show="escola.erronumero1">*Campo Obrigatório</p>
+      <p class="erro" ng-show="escola.erronumero2">*Apenas Números</p>
+
+      <div class="row">
+        <div class="col col-50">
+          <div class="row">
+            <span>*CEP</span>
+          </div>
+          <div class="row">
+            <label class="item item-input">
+              <input type="text" ng-model="escolao.cep" ui-br-cep-mask>
+            </label>
+          </div>
+        </div>
+      </div>
+      <p class="erro" ng-show="escola.errocep">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <span>*Telefone 1</span>
+          </div>
+          <div class="row">
+            <label class="item item-input">
+              <input type="text" ng-model="escola.telefone1" ui-br-phone-number>
+            </label>
+          </div>
+        </div>
+
+        <div class="col col-50">
+          <div class="row">
+            <span>Telefone 2</span>
+          </div>
+          <div class="row">
+            <label class="item item-input">
+              <input type="text" ng-model="escola.telefone2" ui-br-phone-number>
+            </label>
+          </div>
+        </div>
+      </div>
+      <p class="erro" ng-show="escola.errotelefone1">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>Descrição</span>
+      </div>
+      <div class="row">
+        <textarea rows="10" ng-model="escola.descricao"></textarea>
+      </div>
+
+      <label>
+        <button class="button button-block" type="submit">Enviar</button>
+      </label>
+
+    </form>
+
+    <!---------------------FIM-FORMULARIO-ESCOLA------------------------------------------>
+
+<!---------------------INICIO-FORMULARIO-BOLSISTA------------------------------------------>
+
+    <form name="form-bolsista" ng-show="selectperfil == 'Bolsista'" ng-submit="SignUpBolsista()">
+
+      <span >*Campos Obrigatórios</span>
+
+      <div class="row">
+        <span style="padding-top: 20px;">*Nome</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text"
+          name="nome"
+          ng-model="bolsista.nome"
+          >       
+        </label>
+      </div>
+      <p class="erro" ng-show="bolsista.erronome">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>*Email</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="bolsista.email">
+        </label>
+      </div>
+      <p class="erro" ng-show="bolsista.erroemail1">*Campo Obrigatório</p> 
+      <p class="erro" ng-show="bolsista.erroemail2">*Email Inválido</p> 
+
+      
+      
+      <div class="row">
+        <span>Telefone</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="bolsista.telefone1" ui-br-phone-number>
+        </label>
+      </div>
+        
+      <p class="erro" ng-show="bolsista.errotelefone1">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>Descrição</span>
+      </div>
+      <div class="row">
+        <textarea rows="10" ng-model="bolsista.descricao"></textarea>
+      </div>
+
+      <label>
+        <button class="button button-block" type="submit">Enviar</button>
+      </label>
+
+    </form>
+
+     <!---------------------FIM-FORMULARIO-BOLSISTA------------------------------------------>
+
+<!---------------------INICIO-FORMULARIO-PROFESSOR------------------------------------------>
+
+    <form name="form-professor" ng-show="selectperfil == 'Professor'" ng-submit="SignUpProfessor()">
+
+      <span >*Campos Obrigatórios</span>
+
+      <div class="row">
+        <span style="padding-top: 20px;">*Nome</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text"
+          name="nome"
+          ng-model="professor.nome"
+          >       
+        </label>
+      </div>
+      <p class="erro" ng-show="professor.erronome">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>*Email</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="professor.email">
+        </label>
+      </div>
+      <p class="erro" ng-show="professor.erroemail1">*Campo Obrigatório</p> 
+      <p class="erro" ng-show="professor.erroemail2">*Email Inválido</p> 
+
+      
+      
+      <div class="row">
+        <span>Telefone</span>
+      </div>
+      <div class="row">
+        <label class="item item-input">
+          <input type="text" ng-model="professor.telefone1" ui-br-phone-number>
+        </label>
+      </div>
+        
+      <p class="erro" ng-show="professor.errotelefone1">*Campo Obrigatório</p> 
+
+      <div class="row">
+        <span>Descrição</span>
+      </div>
+      <div class="row">
+        <textarea rows="10" ng-model="professor.descricao"></textarea>
+      </div>
+
+      <label>
+        <button class="button button-block" type="submit">Enviar</button>
+      </label>
+
+    </form>
+
+    <!---------------------FIM-FORMULARIO-PROFESSOR------------------------------------------>
   </ion-content>
 </ion-view>
