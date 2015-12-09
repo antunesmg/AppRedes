@@ -42,6 +42,16 @@ angular.module('AppRedes', ['ionic', 'starter.controllers'])
       }
     })
 
+   .state('app.signup', {
+      url: '/signup',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/signup.html',
+          controller: 'SignUpCtrl'
+        }
+      }
+    })
+
   // ---------------------------------
   .state('app.search', {
     url: '/search',

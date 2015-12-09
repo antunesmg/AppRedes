@@ -1,0 +1,67 @@
+ion-content {
+	background-color: #212121;
+}
+
+span{
+	width: 90%;
+	margin-left: 4%;
+	color: #fff;
+}
+
+select {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	height: 40px;
+	width: 96%;
+	margin-left: 2%;
+	border-radius: 8px;
+	background-color: #bfbfbf;
+}
+
+.list{
+	margin-top: 10px;
+}
+
+.item-input {
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 5%; 
+    width: 90%;
+    background-color: #bfbfbf;
+    border-radius: 8px;
+}
+
+.numero{
+	margin-right: -20px;
+	margin-left: 10px;
+}
+
+.col{
+	padding: 0;
+	margin-bottom: -5px;
+}
+
+textarea{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 5%; 
+    padding-top: 5px;
+    padding-left: 5px; 
+    width: 90%;
+    background-color: #bfbfbf;
+    border-radius: 8px;
+}
+
+.button {
+    border-color: #245b7a;
+    background-color: #245b7a;
+    color: #fff;
+    height: 50px;
+    margin-left: 5%;
+    min-width: none !important;
+    width: 90% !important;
+    border-radius: 8px;
+}
+
+
