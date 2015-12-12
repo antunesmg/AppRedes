@@ -52,6 +52,16 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
       }
     })
 
+   .state('app.main', {
+      url: '/main',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/main.html',
+          controller: 'MainCtrl'
+        }
+      }
+    })
+
   // ---------------------------------
   .state('app.search', {
     url: '/search',

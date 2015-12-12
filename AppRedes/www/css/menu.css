@@ -1,0 +1,108 @@
+h1, .h1, h2, .h2, h3, .h3 {
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+    background: #016887;
+    height: 60px;
+    padding-top: 8px;
+
+}
+
+.bar-stable .button.button-icon {
+    border-color: transparent;
+    background: none;
+    color: white;
+        margin-left: 5px;
+    margin-right: 10px;
+}
+
+.bar.bar-stable {
+    height: 60px;
+}
+
+.bar .title {
+    padding-top: 8px;
+}
+
+.label-busca{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid;
+    border-bottom-color: white;
+    margin: 10px;
+    top: -4px;
+    width: 340px;
+
+}
+
+.caixa-busca{
+	width: 150px;
+}
+
+.icon-busca{
+
+}
+
+.topo-menu-foto{
+    background-color: black !important;
+    border-color: black !important;
+    margin-bottom: 0px !important;
+    /* color: white; */
+}
+
+.item {
+    padding: 10px;
+    
+}
+
+a.item {
+	padding-left: 60px;
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+}
+
+a.item:hover{
+	text-decoration: none;	
+
+}
+
+.item-avatar, .item-avatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+    margin-left: -10px;
+}
+
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: context-menu;
+}
+
+.nome-usuario{
+	color: white;
+	margin-left: 10px;
+	margin-bottom: 0;
+	margin-top: -5px;
+}
+
+.perfil-usuario{
+	color: white;
+	margin-left: 10px;
+}
+
+.header-menu{
+	background-color: #016887;
+	height: 60px;
+}
+
+.topo-menu{
+	background-color: black;
+	height: 130px;
+}
