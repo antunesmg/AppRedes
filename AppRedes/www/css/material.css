@@ -1,0 +1,65 @@
+.pane, .view {
+    background-color: black;
+}
+.tabs{
+	margin-top: 15px;
+	text-align: center;
+	background-color: #cfcfcf;
+}
+
+.conteudo-tab{
+	margin-top: 105px;
+}
+
+.tab-item-active{
+	color: #016887;
+	background-color: #acacac;
+}
+
+.col-material:first-child{
+	margin-top: 10px;
+	background-color: #cfcfcf;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.col-material{
+	margin-top: 10px;
+	background-color: #cfcfcf;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.col-material:last-child{
+	margin-top: 10px;
+	background-color: #cfcfcf;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.col-videos{
+	text-align: center;
+	height: 100px;
+}
+
+.col-videos-descricao{
+	padding-top: 5%;
+	padding-left: 15px;
+	vertical-align: center;
+	height: 100px;
+	text-align: center;
+	color: white;
+}
+
+img{
+	height: 80px;
+}
+
+.img-youtube{
+	height: 100%;
+}
+
+.linha-descricao{
+	white-space:nowrap;
+	overflow: auto;
+}

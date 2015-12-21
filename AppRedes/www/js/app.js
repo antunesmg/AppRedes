@@ -61,6 +61,15 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
         }
       }
     })
+   .state('app.material', {
+      url: '/material',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/material.html',
+          controller: 'MaterialCtrl'
+        }
+      }
+    })
 
   // ---------------------------------
   .state('app.search', {
@@ -100,5 +109,5 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+  $urlRouterProvider.otherwise('/app/material');
 });
