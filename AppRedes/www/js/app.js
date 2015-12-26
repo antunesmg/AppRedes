@@ -62,6 +62,7 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
         }
       }
     })
+
    .state('app.material', {
     cache: false,
       url: '/material',
@@ -69,6 +70,17 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
         'menuContent': {
           templateUrl: 'templates/material.html',
           controller: 'MaterialCtrl'
+        }
+      }
+    })
+
+   .state('app.favorites', {
+    cache: false,
+      url: '/favorites',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/favorites.html',
+          controller: 'FavoritesCtrl'
         }
       }
     })
@@ -111,5 +123,5 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/main');
+  $urlRouterProvider.otherwise('/app/favorites');
 });

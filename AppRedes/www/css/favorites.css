@@ -1,0 +1,31 @@
+.pane, .view {
+    background-color: #C7C6C6 !important;
+}
+
+.list-favoritos{
+	margin-top: 60px;
+}
+
+.descricao{
+	margin-left: 20px;
+}
+
+.titulo-favorites{
+	margin-right: 10px !important;
+}
+
+.icon-facebook {
+    background-color: #3B5998;
+    color: white;
+    font-size: 22px !important;
+    width: 28px;
+    padding-left: 14px;
+    border-radius: 5px;
+    padding-right: 7px;
+    margin-left: 220px;
+}
+
+.icon-estrela {
+    font-size: 30px;
+    margin-top: -5px;
+}
