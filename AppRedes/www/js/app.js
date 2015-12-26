@@ -53,6 +53,7 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
     })
 
    .state('app.main', {
+    cache: false,
       url: '/main',
       views: {
         'menuContent': {
@@ -62,6 +63,7 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
       }
     })
    .state('app.material', {
+    cache: false,
       url: '/material',
       views: {
         'menuContent': {
@@ -109,5 +111,5 @@ angular.module('AppRedes', ['ionic', 'starter.controllers','ui.utils.masks'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/material');
+  $urlRouterProvider.otherwise('/app/main');
 });
